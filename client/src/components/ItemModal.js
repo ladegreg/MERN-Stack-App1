@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addItem } from '../actions/itemActions';
 import {
   Button,
   Modal,
@@ -9,8 +11,6 @@ import {
   Label,
   Input
 } from 'reactstrap';
-import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
 
 class ItemModal extends Component {
   state = {
