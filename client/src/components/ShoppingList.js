@@ -16,12 +16,12 @@ class ShoppingList extends Component {
 
   render() {
     const { items } = this.props.item;
-    return(
+    return (
       <Container>
         <ListGroup>
           <TransitionGroup className="shopping-list">
             {items.map(({ _id, name }) => (
-              <CSSTransition key={ _id} timeout={500} classNames="fade">
+              <CSSTransition key={_id} timeout={500} classNames="fade">
                 <ListGroupItem>
                   <Button
                     className="remove-btn"
@@ -45,9 +45,9 @@ class ShoppingList extends Component {
 ShoppingList.propTypes = {
   getItems: PropTypes.func.isRequired,
   item: PropTypes.object.isRequired
-}
+};
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   item: state.item
 });
 
